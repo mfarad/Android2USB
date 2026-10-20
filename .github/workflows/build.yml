@@ -1,0 +1,49 @@
+name: Build Android2USB
+on:
+  push:
+    branches: [main]
+    paths-ignore: ['docs/**', 'README.md', '.github/workflows/inspect-brand.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: android-actions/setup-android@v3
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.13'
+      - name: Prepare bundled font and store graphics
+        run: |
+          python3 -m pip install Pillow
+          python3 tools/prepare_assets.py
+      - name: Build and check
+        run: |
+          gradle wrapper --gradle-version 8.13
+          gradle --no-daemon :app:testDebugUnitTest :app:lintDebug :app:assembleDebug :app:bundleRelease
+      - name: Package source with bundled font
+        run: |
+          mkdir -p dist
+          cp app/build/outputs/apk/debug/app-debug.apk dist/Android2USB-test.apk
+          cp app/build/outputs/bundle/release/app-release.aab dist/Android2USB-unsigned.aab
+          cp store/*.png dist/
+          zip -qr dist/Android2USB-source.zip gradlew gradlew.bat gradle app/src app/build.gradle settings.gradle build.gradle gradle.properties tools docs README.md .gitignore
+          sha256sum dist/* > dist/SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Android2USB-1.1
+          path: dist/
+          retention-days: 90
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Android2USB-checks
+          path: |
+            app/build/reports/
