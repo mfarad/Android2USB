@@ -29,7 +29,7 @@ Option simple dans Android Studio :
 
 L’identifiant actuel est ch.xs3.usbphoto. Le nom affiché est Android2USB.
 Décider avant la première publication si cet identifiant doit changer : il est permanent dans Google Play.
-Augmenter versionCode à chaque mise à jour. La version actuelle utilise 2.
+Augmenter versionCode à chaque mise à jour. La version actuelle utilise 3.
 Le projet compile avec SDK 36 et cible API 37. Installer les SDK demandés par Android Studio.
 Vérifier les exigences de niveau cible indiquées dans Play Console au moment du dépôt.
 
@@ -51,15 +51,15 @@ Cette page n’est pas automatiquement publiée par la création du fichier.
 - Publicité : aucune publicité intégrée.
 - Accès à l’application : aucun compte nécessaire.
 - Sécurité des données : le code actuel ne transmet pas les fichiers, ne contient pas de suivi et n’a pas la permission Internet. Vérifier les réponses selon les définitions du formulaire.
-- Liens externes : PayPal, GitHub et XS3 ouvrent un navigateur ou une autre application.
+- Liens externes : Buy Me a Coffee, GitHub et XS3 ouvrent un navigateur ou une autre application.
 - Public cible et classification du contenu : répondre selon le public visé.
 - Service au premier plan : déclarer dataSync. Expliquer que l’utilisateur lance une copie locale vers USB, voit la progression et peut l’arrêter. Fournir la vidéo demandée par la console.
 - Aucune permission d’accès global aux fichiers ni READ_MEDIA_IMAGES n’est utilisée : les dossiers sont autorisés par le sélecteur Android.
 
-## 7. Vérifier le soutien PayPal
+## 7. Vérifier le soutien Buy Me a Coffee
 Le bouton est facultatif et ne débloque aucun contenu, service, badge ou fonction.
 Google indique que les contributions allant à 100 % au créateur, sans avantage numérique, peuvent être traitées comme des paiements entre personnes et ne pas utiliser Play Billing.
-Vérifier que le fonctionnement réel du compte PayPal respecte ces conditions avant publication. Ne pas utiliser ce bouton pour vendre une fonction.
+Vérifier que le fonctionnement réel du compte Buy Me a Coffee respecte ces conditions avant publication. Ne pas utiliser ce bouton pour vendre une fonction.
 L’acceptation finale dépend de l’examen Google Play.
 
 ## 8. Tester via Google Play

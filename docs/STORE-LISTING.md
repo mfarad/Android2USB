@@ -13,7 +13,7 @@ L’application fonctionne localement, sans compte, sans publicité et sans suiv
 Choisissez le français ou l’anglais au premier démarrage. La langue reste modifiable dans les paramètres.
 Une clé USB reconnue par Android est nécessaire. Certains appareils demandent un adaptateur USB OTG.
 La copie démarre avec le bouton. Elle ne démarre pas automatiquement au branchement.
-Le soutien via PayPal est facultatif et ne débloque aucune fonction.
+Le soutien via Buy Me a Coffee est facultatif et ne débloque aucune fonction.
 
 ## English
 Short description: Copy Android files to USB. Skip existing files. No ads or account.
@@ -26,4 +26,4 @@ The app works locally, with no account, ads or tracking.
 Choose English or French at first launch. You can change the language in Settings.
 Your Android device must recognize the USB drive. Some devices need a USB OTG adapter.
 The copy starts when you tap the button, not when you connect the drive.
-Optional support through PayPal does not unlock any features.
+Optional support through Buy Me a Coffee does not unlock any features.
