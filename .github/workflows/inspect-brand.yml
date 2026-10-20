@@ -1,0 +1,24 @@
+name: Inspect XS3 brand
+on:
+  push:
+    paths: ['.github/workflows/inspect-brand.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Read public XS3 page and CSS
+        run: |
+          python3 - <<'PY'
+          import urllib.request,re,urllib.parse
+          base='https://xs3.ch/test/'
+          html=urllib.request.urlopen(base,timeout=30).read().decode()
+          print('HTML:',html[:35000])
+          for href in re.findall(r'<link[^>]+href=[\"\x27]([^\"\x27]+)',html):
+              if '.css' in href:
+                  url=urllib.parse.urljoin(base,href)
+                  print('CSS URL',url)
+                  print(urllib.request.urlopen(url,timeout=30).read().decode()[:30000])
+          PY
