@@ -32,7 +32,7 @@ public class MainActivity extends Activity {
  View spacer=new View(this);root.addView(spacer,new LinearLayout.LayoutParams(1,0,1));
  BrandView coffee=new BrandView(this,BrandView.Kind.COFFEE);LinearLayout.LayoutParams cp=new LinearLayout.LayoutParams(dp(200),dp(48));cp.gravity=Gravity.CENTER_HORIZONTAL;cp.topMargin=dp(24);cp.bottomMargin=dp(8);root.addView(coffee,cp);coffee.setContentDescription(t("Buy me a coffee. Open the support page.","Offrez-moi un café. Ouvrir la page de soutien."));clickable(coffee,()->open("https://buymeacoffee.com/xscube"));
  LinearLayout footer=new LinearLayout(this);footer.setGravity(Gravity.CENTER_VERTICAL);root.addView(footer);
- BrandView logo=new BrandView(this,BrandView.Kind.LOGO);footer.addView(logo,new LinearLayout.LayoutParams(dp(72),dp(50)));logo.setContentDescription(t("XS3 website","Site XS3"));clickable(logo,()->open("https://xs3.ch/test/"));
+ BrandView logo=new BrandView(this,BrandView.Kind.LOGO);footer.addView(logo,new LinearLayout.LayoutParams(dp(72),dp(50)));logo.setContentDescription(t("XS3 website","Site XS3"));clickable(logo,()->open("https://www.xs3.ch"));
  TextView github=new TextView(this);github.setText("GitHub ↗");github.setTextSize(14);github.setTextColor(BLUE);github.setGravity(Gravity.END|Gravity.CENTER_VERTICAL);github.setMinHeight(dp(48));footer.addView(github,new LinearLayout.LayoutParams(0,-2,1));clickable(github,()->open("https://github.com/mfarad/Android2USB"));
  render();}
  void clickable(View v,Runnable action){v.setFocusable(true);v.setClickable(true);v.setOnClickListener(w->action.run());}
