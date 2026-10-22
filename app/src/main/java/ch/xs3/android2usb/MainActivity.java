@@ -1,4 +1,4 @@
-package ch.xs3.usbphoto;
+package ch.xs3.android2usb;
 import android.app.*;import android.os.*;import android.content.*;import android.content.res.ColorStateList;import android.graphics.*;import android.graphics.drawable.GradientDrawable;import android.net.Uri;import android.provider.DocumentsContract;import android.view.*;import android.widget.*;
 public class MainActivity extends Activity {
  static final int BG=0xff080e16,INK=0xffe7f4ff,MUTED=0xff9cadc2,BLUE=0xff46bfff;

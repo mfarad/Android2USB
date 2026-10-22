@@ -1,4 +1,4 @@
-package ch.xs3.usbphoto;
+package ch.xs3.android2usb;
 final class CopyRules {
  static boolean overlap(String a,String b){return a.equals(b)||a.startsWith(b+"/")||b.startsWith(a+"/")||(a.endsWith(":")&&b.startsWith(a))||(b.endsWith(":")&&a.startsWith(b));}
  static String safeName(String name) {

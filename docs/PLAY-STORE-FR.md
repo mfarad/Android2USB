@@ -27,9 +27,9 @@ Option simple dans Android Studio :
 5. Choisir la variante release et produire le bundle signé.
 6. Garder une copie sûre de la clé pour les versions suivantes.
 
-L’identifiant actuel est ch.xs3.usbphoto. Le nom affiché est Android2USB.
+L’identifiant actuel est ch.xs3.android2usb. Le nom affiché est Android2USB.
 Décider avant la première publication si cet identifiant doit changer : il est permanent dans Google Play.
-Augmenter versionCode à chaque mise à jour. La version actuelle utilise 3.
+Augmenter versionCode à chaque mise à jour. La version actuelle utilise 5.
 Le projet compile avec SDK 36 et cible API 37. Installer les SDK demandés par Android Studio.
 Vérifier les exigences de niveau cible indiquées dans Play Console au moment du dépôt.
 

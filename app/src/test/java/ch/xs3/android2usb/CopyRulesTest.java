@@ -1,4 +1,4 @@
-package ch.xs3.usbphoto;
+package ch.xs3.android2usb;
 import org.junit.Test;
 import static org.junit.Assert.*;
 public class CopyRulesTest {

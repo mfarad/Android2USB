@@ -1,4 +1,4 @@
-package ch.xs3.usbphoto;
+package ch.xs3.android2usb;
 import android.app.*;import android.content.*;import android.database.Cursor;import android.net.Uri;import android.os.*;import android.provider.DocumentsContract;import java.io.*;import java.util.*;
 public class CopyService extends Service {
  static volatile boolean running=false,scanning=false,cancelled=false;

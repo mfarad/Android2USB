@@ -1,4 +1,4 @@
-package ch.xs3.usbphoto;
+package ch.xs3.android2usb;
 import android.content.Context;import android.graphics.*;import android.view.View;
 /** Native vector artwork. XS3 wordmark follows the public site's HTML/CSS. */
 public final class BrandView extends View {
