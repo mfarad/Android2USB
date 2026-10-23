@@ -3,7 +3,7 @@
 Local file backup from Android to a USB drive. No ads, account, analytics or Internet permission.
 
 ## Download
-Open [GitHub Actions](https://github.com/mfarad/Android2USB/actions/workflows/build.yml), select the latest successful build, then download **Android2USB-1.4** under **Artifacts**. Sign in to GitHub to download.
+Open [GitHub Actions](https://github.com/mfarad/Android2USB/actions/workflows/build.yml), select the latest successful build, then download **Android2USB-1.5** under **Artifacts**. Sign in to GitHub to download.
 
 - `Android2USB-test.apk`: signed test build for direct installation.
 - `Android2USB-unsigned.aab`: release bundle; sign it with your private upload key before Play submission.
